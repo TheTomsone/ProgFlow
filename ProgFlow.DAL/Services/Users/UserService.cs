@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using ProgFlow.DAL.Interfaces;
+using ProgFlow.DAL.Interfaces.Users;
 using ProgFlow.DAL.Models;
 using ProgFlow.DAL.Services.Base;
 using System;
@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgFlow.DAL.Services
+namespace ProgFlow.DAL.Services.Users
 {
-    public class DataService : Creatable<Data>, IDataService
+    public class UserService : Authenticable, IUserService
     {
-        public DataService(IConfiguration config) : base(config)
+        public UserService(IConfiguration config) : base(config)
         {
         }
     }

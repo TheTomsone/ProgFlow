@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[S_STAGE]
+(
+	[s_id] INT NOT NULL PRIMARY KEY,
+	FOREIGN KEY ([s_id]) REFERENCES [dbo].[C_CATEGORY]([c_id])
+)

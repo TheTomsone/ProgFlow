@@ -59,21 +59,31 @@
     <Folder Include="Tables" />
     <Folder Include="Procedures" />
     <Folder Include="Functions" />
+    <Folder Include="Tables\Programs" />
+    <Folder Include="Tables\Users" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\D_DATA.sql" />
-    <Build Include="Tables\G_GENRE.sql" />
-    <Build Include="Tables\DG_DATA_GENRE.sql" />
-    <Build Include="Tables\P_PROGRAM.sql" />
-    <Build Include="Tables\S_STAGE.sql" />
-    <Build Include="Tables\VN_VERSION_NB.sql" />
-    <Build Include="Tables\C_CONTENT.sql" />
-    <Build Include="Tables\U_USER.sql" />
-    <Build Include="Tables\T_TEAM.sql" />
-    <Build Include="Tables\TU_TEAM_USER.sql" />
     <Build Include="Procedures\SP_LOGIN.sql" />
     <Build Include="Procedures\SP_REGISTER.sql" />
-    <Build Include="Tables\TR_TEAM_ROLE.sql" />
-    <Build Include="Tables\A_AUTHORIZED.sql" />
+    <Build Include="Tables\Programs\C_CONTENT.sql" />
+    <Build Include="Tables\Programs\P_PROGRAM.sql" />
+    <Build Include="Tables\Users\A_AUTHORIZED.sql" />
+    <Build Include="Tables\Users\T_TEAM.sql" />
+    <Build Include="Tables\Users\TR_TEAM_ROLE.sql" />
+    <Build Include="Tables\Users\TU_TEAM_USER.sql" />
+    <Build Include="Tables\Users\U_USER.sql" />
+    <Build Include="Tables\Programs\L_LANGUAGE.sql" />
+    <Build Include="Tables\Programs\PL_PROGRAM_LANGUAGE.sql" />
+    <Build Include="Tables\DC_DATA_CATEGORY.sql" />
+    <Build Include="Tables\C_CATEGORY.sql" />
+    <Build Include="Tables\D_DATA.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="POST_DEFAULT_DATA.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Programs\S_STAGE.sql" />
+    <Build Include="Tables\Programs\VN_VERSION_NB.sql" />
   </ItemGroup>
 </Project>

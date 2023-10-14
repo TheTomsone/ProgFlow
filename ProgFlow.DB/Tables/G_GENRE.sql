@@ -1,5 +1,0 @@
-﻿CREATE TABLE [dbo].[G_GENRE]
-(
-	[g_id]		INT			NOT NULL PRIMARY KEY,
-	[g_label]	VARCHAR(50) NOT NULL UNIQUE,
-)

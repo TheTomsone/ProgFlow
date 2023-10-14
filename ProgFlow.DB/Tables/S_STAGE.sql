@@ -1,5 +1,0 @@
-﻿CREATE TABLE [dbo].[S_STAGE]
-(
-	[s_id] INT NOT NULL PRIMARY KEY,
-	FOREIGN KEY ([s_id]) REFERENCES [dbo].[G_GENRE]([g_id])
-)

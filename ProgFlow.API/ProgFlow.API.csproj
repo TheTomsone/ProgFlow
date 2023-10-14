@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProgFlow.BLL\ProgFlow.BLL.csproj" />
+  </ItemGroup>
+
 </Project>

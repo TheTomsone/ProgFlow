@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using ProgFlow.DAL.Interfaces.Base;
 using System;
 using System.Collections.Generic;
@@ -12,13 +13,16 @@ namespace ProgFlow.DAL.Services.Base
 {
     public class BaseService<TModel> : IBaseService<TModel> where TModel : class
     {
+        private readonly SqlConnection _connection;
         public string Prefix => typeof(TModel).Name.DeleteLowerChar();
-
         public string Tablename => typeof(TModel).Name.UnderscoreBetweenLowerUpper().ToUpper();
-
         public string FullTablename => Prefix + "_" + Tablename;
+        public SqlConnection Connection => _connection;
 
-        public SqlConnection Connection => throw new NotImplementedException();
+        public BaseService(IConfiguration config)
+        {
+            _connection = new SqlConnection(config.GetConnectionString("default"));
+        }
     }
     public static partial class RegexConverter
     {

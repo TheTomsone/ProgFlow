@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace ProgFlow.DAL.Services
 {
-    public class DataService : Creatable<Data>, IDataService
+    public class CategoryService : Readable<Category>, ICategoryService
     {
-        public DataService(IConfiguration config) : base(config)
+        public CategoryService(IConfiguration config) : base(config)
         {
         }
     }

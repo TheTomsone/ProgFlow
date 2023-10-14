@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[L_LANGUAGE]
+(
+	[l_id] INT NOT NULL PRIMARY KEY,
+	FOREIGN KEY ([l_id]) REFERENCES [dbo].[C_CATEGORY]([c_id]),
+)
